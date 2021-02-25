@@ -45,7 +45,7 @@
 		<div v-if="requestError" class="card">
 			<p>Something went wrong!</p>
 		</div>
-		<div class="auth-form-other">
+		<div v-if="getSiteSittings.allowSignup" class="auth-form-other">
 			Don't have an account yet?
 			<router-link to="/join">
 				Sign up

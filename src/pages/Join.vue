@@ -41,6 +41,7 @@
 				<Button
 					type="primary"
 					:loading="buttonLoading"
+					:disabled="!getSiteSittings.allowSignup"
 					@click="join"
 				>
 					Create account

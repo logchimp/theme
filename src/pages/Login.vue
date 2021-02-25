@@ -50,10 +50,12 @@
 			<router-link to="/password-reset">
 				Forget password?
 			</router-link>
-			· Don't have an account yet?
-			<router-link to="/join">
-				Sign up
-			</router-link>
+			<div v-if="getSiteSittings.allowSignup">
+				· Don't have an account yet?
+				<router-link to="/join">
+					Sign up
+				</router-link>
+			</div>
 		</div>
 	</div>
 </template>

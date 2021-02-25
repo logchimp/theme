@@ -49,7 +49,11 @@
 						<Button type="text" @click="login">
 							Login
 						</Button>
-						<Button type="outline" @click="join">
+						<Button
+							v-if="getSiteSittings.allowSignup"
+							type="outline"
+							@click="join"
+						>
 							Create an account
 						</Button>
 					</div>
