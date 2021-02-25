@@ -5,7 +5,8 @@ const state = {
 	icon: "",
 	accentColor: "",
 	googleAnalyticsId: "",
-	isPoweredBy: true
+	isPoweredBy: true,
+	allowSignup: true
 };
 
 const getters = {
@@ -21,6 +22,7 @@ const mutations = {
 		state.logo = payload.logo;
 		state.title = payload.title;
 		state.googleAnalyticsId = payload.googleAnalyticsId;
+		state.allowSignup = payload.allowSignup;
 
 		localStorage.setItem("settings", JSON.stringify(payload));
 	}
