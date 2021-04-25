@@ -211,10 +211,6 @@ export default {
 			}
 		},
 		async suggestBoard(name) {
-			if (!name) {
-				return this.clearSuggestion("boards");
-			}
-
 			try {
 				const response = await searchBoard(name);
 				this.boards.suggestions = response.data.boards;
@@ -223,10 +219,6 @@ export default {
 			}
 		},
 		async suggestRoadmap(name) {
-			if (!name) {
-				return this.clearSuggestion("roadmaps");
-			}
-
 			try {
 				const response = await searchRoadmap(name);
 				this.roadmaps.suggestions = response.data.roadmaps;
