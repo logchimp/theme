@@ -42,7 +42,12 @@
 					/>
 				</div>
 				<div class="table-data boards-table-name">
-					{{ board.name }}
+					<router-link
+						:to="`/boards/${board.url}`"
+						class="table-data table-data-icon"
+					>
+						{{ board.name }}
+					</router-link>
 				</div>
 				<div class="table-data boards-table-posts">
 					{{ board.post_count }}
@@ -51,6 +56,7 @@
 					<router-link
 						:to="`/boards/${board.url}`"
 						class="table-data table-data-icon boards-table-icon-link"
+						target="_blank"
 					>
 						<link-icon />
 					</router-link>
