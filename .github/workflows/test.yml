@@ -25,6 +25,9 @@ jobs:
       - name: Yarn install
         run: yarn install
 
+      - name: eslint:check
+        run: yarn eslint:check
+
       - name: Unit tests
         run: yarn run test
 

@@ -14,7 +14,8 @@
 		"dev": "vue-cli-service serve",
 		"build": "vue-cli-service build",
 		"test": "jest --config ./jest.config.js",
-		"eslint:fix": "eslint --ext .vue,.js ./src --fix",
+		"eslint:check": "eslint --ext .vue,.js ./src",
+		"eslint:fix": "yarn eslint:check --fix",
 		"prettier:format": "prettier --write './**/*.{vue,js}'",
 		"stylelint": "stylelint --syntax sass './src/styles/**/*.sass'"
 	},
