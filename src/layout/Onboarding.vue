@@ -1,13 +1,13 @@
 <template>
-	<div class="container">
-		<div class="">
-			<router-view />
-		</div>
-	</div>
+  <div class="container">
+    <div class="">
+      <router-view />
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-	name: "Onboarding"
+  name: "Onboarding"
 };
 </script>

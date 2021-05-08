@@ -10,15 +10,15 @@ import store from "../store";
  * @returns {object} response
  */
 export const getAllRoles = async () => {
-	const token = store.getters["user/getAuthToken"];
+  const token = store.getters["user/getAuthToken"];
 
-	return await axios({
-		method: "GET",
-		url: "/api/v1/roles",
-		headers: {
-			Authorization: `Bearer ${token}`
-		}
-	});
+  return await axios({
+    method: "GET",
+    url: "/api/v1/roles",
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
 };
 
 /**
@@ -29,15 +29,15 @@ export const getAllRoles = async () => {
  * @returns {object} response
  */
 export const getRole = async id => {
-	const token = store.getters["user/getAuthToken"];
+  const token = store.getters["user/getAuthToken"];
 
-	return await axios({
-		method: "GET",
-		url: `/api/v1/roles/${id}`,
-		headers: {
-			Authorization: `Bearer ${token}`
-		}
-	});
+  return await axios({
+    method: "GET",
+    url: `/api/v1/roles/${id}`,
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
 };
 
 /**
@@ -46,15 +46,15 @@ export const getRole = async id => {
  * @returns {object} response
  */
 export const createRole = async () => {
-	const token = store.getters["user/getAuthToken"];
+  const token = store.getters["user/getAuthToken"];
 
-	return await axios({
-		method: "POST",
-		url: "/api/v1/roles",
-		headers: {
-			Authorization: `Bearer ${token}`
-		}
-	});
+  return await axios({
+    method: "POST",
+    url: "/api/v1/roles",
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
 };
 
 /**
@@ -69,16 +69,16 @@ export const createRole = async () => {
  * @returns {object} response
  */
 export const updateRole = async role => {
-	const token = store.getters["user/getAuthToken"];
+  const token = store.getters["user/getAuthToken"];
 
-	return await axios({
-		method: "PATCH",
-		url: "/api/v1/roles",
-		data: {
-			...role
-		},
-		headers: {
-			Authorization: `Bearer ${token}`
-		}
-	});
+  return await axios({
+    method: "PATCH",
+    url: "/api/v1/roles",
+    data: {
+      ...role
+    },
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
 };

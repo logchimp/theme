@@ -12,20 +12,20 @@ import store from "../store";
  * @returns {object} response
  */
 export const addVote = async postId => {
-	const token = store.getters["user/getAuthToken"];
-	const userId = store.getters["user/getUserId"];
+  const token = store.getters["user/getAuthToken"];
+  const userId = store.getters["user/getUserId"];
 
-	return await axios({
-		method: "POST",
-		url: "/api/v1/votes",
-		data: {
-			userId,
-			postId
-		},
-		headers: {
-			Authorization: `Bearer ${token}`
-		}
-	});
+  return await axios({
+    method: "POST",
+    url: "/api/v1/votes",
+    data: {
+      userId,
+      postId
+    },
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
 };
 
 /**
@@ -36,18 +36,18 @@ export const addVote = async postId => {
  * @returns {object} response
  */
 export const deleteVote = async postId => {
-	const userId = store.getters["user/getUserId"];
-	const token = store.getters["user/getAuthToken"];
+  const userId = store.getters["user/getUserId"];
+  const token = store.getters["user/getAuthToken"];
 
-	return await axios({
-		method: "DELETE",
-		url: "/api/v1/votes",
-		data: {
-			userId,
-			postId
-		},
-		headers: {
-			Authorization: `Bearer ${token}`
-		}
-	});
+  return await axios({
+    method: "DELETE",
+    url: "/api/v1/votes",
+    data: {
+      userId,
+      postId
+    },
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
 };

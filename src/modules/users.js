@@ -12,15 +12,15 @@ import store from "../store";
  * @returns {object} response
  */
 export const getUserSettings = async () => {
-	const token = store.getters["user/getAuthToken"];
+  const token = store.getters["user/getAuthToken"];
 
-	return await axios({
-		method: "GET",
-		url: `/api/v1/users/profile`,
-		headers: {
-			Authorization: `Bearer ${token}`
-		}
-	});
+  return await axios({
+    method: "GET",
+    url: "/api/v1/users/profile",
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
 };
 
 /**
@@ -32,33 +32,33 @@ export const getUserSettings = async () => {
  * @returns {object} response
  */
 export const updateUserSettings = async user => {
-	const token = store.getters["user/getAuthToken"];
+  const token = store.getters["user/getAuthToken"];
 
-	return await axios({
-		method: "patch",
-		url: "/api/v1/users/profile",
-		data: {
-			...user
-		},
-		headers: {
-			Authorization: `Bearer ${token}`
-		}
-	});
+  return await axios({
+    method: "patch",
+    url: "/api/v1/users/profile",
+    data: {
+      ...user
+    },
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
 };
 
 /**
  * Get authenticated user permissions
  */
 export const getPermissions = async () => {
-	const token = store.getters["user/getAuthToken"];
+  const token = store.getters["user/getAuthToken"];
 
-	return await axios({
-		method: "GET",
-		url: "/api/v1/users/permissions",
-		headers: {
-			Authorization: `Bearer ${token}`
-		}
-	});
+  return await axios({
+    method: "GET",
+    url: "/api/v1/users/permissions",
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
 };
 
 /**
@@ -70,14 +70,14 @@ export const getPermissions = async () => {
  * @returns {object} response
  */
 export const getAllUsers = async (page, sort) => {
-	return await axios({
-		method: "GET",
-		url: "/api/v1/users",
-		params: {
-			page,
-			created: sort
-		}
-	});
+  return await axios({
+    method: "GET",
+    url: "/api/v1/users",
+    params: {
+      page,
+      created: sort
+    }
+  });
 };
 
 /**
@@ -86,13 +86,13 @@ export const getAllUsers = async (page, sort) => {
  * @returns {object} response
  */
 export const checkUserDashboardAccess = async () => {
-	const token = store.getters["user/getAuthToken"];
+  const token = store.getters["user/getAuthToken"];
 
-	return await axios({
-		method: "GET",
-		url: `/api/v1/users/dashboard`,
-		headers: {
-			Authorization: `Bearer ${token}`
-		}
-	});
+  return await axios({
+    method: "GET",
+    url: "/api/v1/users/dashboard",
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
 };

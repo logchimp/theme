@@ -1,7 +1,7 @@
 <template>
-	<div class="loader">
-		<loader-icon />
-	</div>
+  <div class="loader">
+    <loader-icon />
+  </div>
 </template>
 
 <script>
@@ -9,9 +9,9 @@
 import LoaderIcon from "./icons/Loader";
 
 export default {
-	name: "Loader",
-	components: {
-		LoaderIcon
-	}
+  name: "Loader",
+  components: {
+    LoaderIcon
+  }
 };
 </script>

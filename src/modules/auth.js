@@ -9,14 +9,14 @@ import axios from "axios";
  * @returns {object} response
  */
 export const signin = async (email, password) => {
-	return await axios({
-		method: "POST",
-		url: "/api/v1/auth/login",
-		data: {
-			email,
-			password
-		}
-	});
+  return await axios({
+    method: "POST",
+    url: "/api/v1/auth/login",
+    data: {
+      email,
+      password
+    }
+  });
 };
 
 /**
@@ -27,14 +27,14 @@ export const signin = async (email, password) => {
  * @returns {object} response
  */
 export const signup = async (email, password) => {
-	return await axios({
-		method: "POST",
-		url: "/api/v1/auth/signup",
-		data: {
-			email,
-			password
-		}
-	});
+  return await axios({
+    method: "POST",
+    url: "/api/v1/auth/signup",
+    data: {
+      email,
+      password
+    }
+  });
 };
 
 /**
@@ -44,13 +44,13 @@ export const signup = async (email, password) => {
  * @returns {object} response
  */
 export const resendUserVerificationEmail = async email => {
-	return await axios({
-		method: "POST",
-		url: "/api/v1/auth/email/verify",
-		data: {
-			email
-		}
-	});
+  return await axios({
+    method: "POST",
+    url: "/api/v1/auth/email/verify",
+    data: {
+      email
+    }
+  });
 };
 
 /**
@@ -61,13 +61,13 @@ export const resendUserVerificationEmail = async email => {
  * @returns {object} response
  */
 export const verifyUserEmail = async token => {
-	return await axios({
-		method: "POST",
-		url: "/api/v1/auth/email/validate",
-		data: {
-			token
-		}
-	});
+  return await axios({
+    method: "POST",
+    url: "/api/v1/auth/email/validate",
+    data: {
+      token
+    }
+  });
 };
 
 /**
@@ -78,13 +78,13 @@ export const verifyUserEmail = async token => {
  * @returns {object} response
  */
 export const requestPasswordReset = async email => {
-	return await axios({
-		method: "POST",
-		url: "/api/v1/auth/password/reset",
-		data: {
-			email
-		}
-	});
+  return await axios({
+    method: "POST",
+    url: "/api/v1/auth/password/reset",
+    data: {
+      email
+    }
+  });
 };
 
 /**
@@ -95,13 +95,13 @@ export const requestPasswordReset = async email => {
  * @returns {object} response
  */
 export const validateResetPasswordToken = async token => {
-	return await axios({
-		method: "POST",
-		url: "/api/v1/auth/password/validateToken",
-		data: {
-			token
-		}
-	});
+  return await axios({
+    method: "POST",
+    url: "/api/v1/auth/password/validateToken",
+    data: {
+      token
+    }
+  });
 };
 
 /**
@@ -113,12 +113,12 @@ export const validateResetPasswordToken = async token => {
  * @returns {object} response
  */
 export const setNewPassword = async (token, password) => {
-	return await axios({
-		method: "POST",
-		url: "/api/v1/auth/password/set",
-		data: {
-			token,
-			password
-		}
-	});
+  return await axios({
+    method: "POST",
+    url: "/api/v1/auth/password/set",
+    data: {
+      token,
+      password
+    }
+  });
 };

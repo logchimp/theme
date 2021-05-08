@@ -10,10 +10,10 @@ import store from "../store";
  * @returns {object} response
  */
 export const getAllRoadmaps = async () => {
-	return await axios({
-		method: "GET",
-		url: "/api/v1/roadmaps"
-	});
+  return await axios({
+    method: "GET",
+    url: "/api/v1/roadmaps"
+  });
 };
 
 /**
@@ -24,10 +24,10 @@ export const getAllRoadmaps = async () => {
  * @returns {object} response
  */
 export const getRoadmapByUrl = async url => {
-	return await axios({
-		method: "GET",
-		url: `/api/v1/roadmaps/${url}`
-	});
+  return await axios({
+    method: "GET",
+    url: `/api/v1/roadmaps/${url}`
+  });
 };
 
 /**
@@ -38,15 +38,15 @@ export const getRoadmapByUrl = async url => {
  * @returns {object} response
  */
 export const searchRoadmap = async name => {
-	const token = store.getters["user/getAuthToken"];
+  const token = store.getters["user/getAuthToken"];
 
-	return await axios({
-		method: "GET",
-		url: `/api/v1/roadmaps/search/${name}`,
-		headers: {
-			Authorization: `Bearer ${token}`
-		}
-	});
+  return await axios({
+    method: "GET",
+    url: `/api/v1/roadmaps/search/${name}`,
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
 };
 
 /**
@@ -55,15 +55,15 @@ export const searchRoadmap = async name => {
  * @returns {object} response
  */
 export const createRoadmap = async () => {
-	const token = store.getters["user/getAuthToken"];
+  const token = store.getters["user/getAuthToken"];
 
-	return await axios({
-		method: "POST",
-		url: "/api/v1/roadmaps",
-		headers: {
-			Authorization: `Bearer ${token}`
-		}
-	});
+  return await axios({
+    method: "POST",
+    url: "/api/v1/roadmaps",
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
 };
 
 /**
@@ -78,18 +78,18 @@ export const createRoadmap = async () => {
  * @returns {object} response
  */
 export const updateRoadmap = async roadmap => {
-	const token = store.getters["user/getAuthToken"];
+  const token = store.getters["user/getAuthToken"];
 
-	return await axios({
-		method: "PATCH",
-		url: "/api/v1/roadmaps",
-		data: {
-			...roadmap
-		},
-		headers: {
-			Authorization: `Bearer ${token}`
-		}
-	});
+  return await axios({
+    method: "PATCH",
+    url: "/api/v1/roadmaps",
+    data: {
+      ...roadmap
+    },
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
 };
 
 /**
@@ -106,19 +106,19 @@ export const updateRoadmap = async roadmap => {
  * @returns {object} response
  */
 export const sortRoadmap = async ({ from, to }) => {
-	const token = store.getters["user/getAuthToken"];
+  const token = store.getters["user/getAuthToken"];
 
-	return await axios({
-		method: "PATCH",
-		url: "/api/v1/roadmaps/sort",
-		data: {
-			from,
-			to
-		},
-		headers: {
-			Authorization: `Bearer ${token}`
-		}
-	});
+  return await axios({
+    method: "PATCH",
+    url: "/api/v1/roadmaps/sort",
+    data: {
+      from,
+      to
+    },
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
 };
 
 /**
@@ -129,16 +129,16 @@ export const sortRoadmap = async ({ from, to }) => {
  * @returns {object} response
  */
 export const deleteRoadmap = async id => {
-	const token = store.getters["user/getAuthToken"];
+  const token = store.getters["user/getAuthToken"];
 
-	return await axios({
-		method: "DELETE",
-		url: "/api/v1/roadmaps",
-		data: {
-			id
-		},
-		headers: {
-			Authorization: `Bearer ${token}`
-		}
-	});
+  return await axios({
+    method: "DELETE",
+    url: "/api/v1/roadmaps",
+    data: {
+      id
+    },
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
 };
