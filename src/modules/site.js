@@ -59,6 +59,7 @@ export const getSettings = async () => {
  * @param {string} site.description site description
  * @param {string} site.accentColor site accent color
  * @param {string} site.googleAnalyticsId site google analytics ID
+ * @param {string} site.allowSignup allow user creating account
  *
  * @returns {object} response
  */

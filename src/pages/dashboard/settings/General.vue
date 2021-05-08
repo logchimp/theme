@@ -35,6 +35,12 @@
             :error="description.error"
             @hide-error="hideDescriptionError"
           />
+
+          <toggle-item
+            v-model="allowSignup"
+            label="Allow signups"
+            note="Allows users to create account?"
+          />
         </div>
 
         <div class="form-column">
@@ -102,6 +108,7 @@ import {
 import LText from "../../../components/input/LText";
 import Button from "../../../components/Button";
 import ColorInput from "../../../components/ColorInput";
+import ToggleItem from "../../../components/input/ToggleItem";
 
 export default {
   name: "DashboardSettings",
@@ -109,7 +116,8 @@ export default {
     // components
     LText,
     Button,
-    ColorInput
+    ColorInput,
+    ToggleItem
   },
   data() {
     return {
@@ -128,6 +136,7 @@ export default {
           message: ""
         }
       },
+      allowSignup: false,
       accentColor: {
         value: "484d7c",
         error: {
@@ -208,7 +217,8 @@ export default {
         title: this.siteName.value,
         description: this.description.value,
         accentColor: this.accentColor.value,
-        googleAnalyticsId: this.googleAnalyticsId.value
+        googleAnalyticsId: this.googleAnalyticsId.value,
+        allowSignup: this.allowSignup
       };
 
       try {
@@ -234,6 +244,7 @@ export default {
         this.siteName.value = response.data.settings.title;
         this.logo = response.data.settings.logo;
         this.description.value = response.data.settings.description;
+        this.allowSignup = response.data.settings.allowSignup;
         this.accentColor.value = response.data.settings.accentColor;
         this.googleAnalyticsId.value = response.data.settings.googleAnalyticsId;
       } catch (error) {
