@@ -17,7 +17,9 @@
     "eslint:check": "eslint './**/*.{vue,js}'",
     "eslint:fix": "yarn eslint:check --fix",
     "prettier:format": "prettier --write .",
-    "stylelint": "stylelint --syntax sass './src/styles/**/*.sass'"
+    "stylelint": "stylelint --syntax sass './src/styles/**/*.sass'",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -36,11 +38,16 @@
   },
   "devDependencies": {
     "@babel/preset-env": "^7.14.1",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/vue": "^6.2.9",
     "@vue/cli-plugin-babel": "^4.5.13",
     "@vue/cli-plugin-eslint": "^4.5.13",
     "@vue/cli-service": "^4.5.13",
     "@vue/test-utils": "^1.2.0",
     "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.2.2",
     "babel-plugin-transform-require-context": "^0.1.1",
     "eslint": "^7.26.0",
     "eslint-plugin-jest": "^24.3.6",
@@ -50,6 +57,7 @@
     "stylelint": "^13.13.1",
     "stylelint-scss": "^3.18.0",
     "vue-jest": "^3.0.7",
+    "vue-loader": "^15.9.6",
     "vue-template-compiler": "^2.6.12"
   },
   "keywords": [
