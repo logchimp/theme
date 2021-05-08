@@ -9,7 +9,7 @@ module.exports = {
 	extends: ["eslint:recommended", "plugin:vue/recommended"],
 	rules: {
     "semi": [1, "always"],
-		"vue/html-indent": [1, "tab"],
+		"vue/html-indent": [1, 2],
 		"vue/max-attributes-per-line": [
 			2,
 			{
