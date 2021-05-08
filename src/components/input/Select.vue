@@ -1,11 +1,11 @@
 <template>
-	<div>
-		select
-	</div>
+  <div>
+    select
+  </div>
 </template>
 
 <script>
 export default {
-	name: "Select"
-}
+  name: "Select"
+};
 </script>

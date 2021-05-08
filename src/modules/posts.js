@@ -13,22 +13,22 @@ import store from "../store";
  * @returns {object} response
  */
 export const createPost = async (boardId, post) => {
-	const token = store.getters["user/getAuthToken"];
-	const userId = store.getters["user/getUserId"];
+  const token = store.getters["user/getAuthToken"];
+  const userId = store.getters["user/getUserId"];
 
-	return await axios({
-		method: "POST",
-		url: "/api/v1/posts",
-		data: {
-			title: post.title,
-			contentMarkdown: post.description,
-			userId,
-			boardId
-		},
-		headers: {
-			Authorization: `Bearer ${token}`
-		}
-	});
+  return await axios({
+    method: "POST",
+    url: "/api/v1/posts",
+    data: {
+      title: post.title,
+      contentMarkdown: post.description,
+      userId,
+      boardId
+    },
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
 };
 
 /**
@@ -44,26 +44,26 @@ export const createPost = async (boardId, post) => {
  * @returns {object} response
  */
 export const getPosts = async (
-	page = 1,
-	limit = 10,
-	sort = "DESC",
-	boardId,
-	roadmapId
+  page = 1,
+  limit = 10,
+  sort = "DESC",
+  boardId,
+  roadmapId
 ) => {
-	const userId = store.getters["user/getUserId"];
+  const userId = store.getters["user/getUserId"];
 
-	return await axios({
-		method: "POST",
-		url: "/api/v1/posts/get",
-		data: {
-			page,
-			limit,
-			created: sort,
-			userId,
-			boardId,
-			roadmapId
-		}
-	});
+  return await axios({
+    method: "POST",
+    url: "/api/v1/posts/get",
+    data: {
+      page,
+      limit,
+      created: sort,
+      userId,
+      boardId,
+      roadmapId
+    }
+  });
 };
 
 /**
@@ -74,16 +74,16 @@ export const getPosts = async (
  * @returns {object} response
  */
 export const getPostBySlug = async slug => {
-	const userId = store.getters["user/getUserId"];
+  const userId = store.getters["user/getUserId"];
 
-	return await axios({
-		method: "POST",
-		url: `/api/v1/posts/slug`,
-		data: {
-			slug,
-			userId
-		}
-	});
+  return await axios({
+    method: "POST",
+    url: `/api/v1/posts/slug`,
+    data: {
+      slug,
+      userId
+    }
+  });
 };
 
 /**
@@ -101,16 +101,16 @@ export const getPostBySlug = async slug => {
  * @returns {object} response
  */
 export const updatePost = async post => {
-	const token = store.getters["user/getAuthToken"];
+  const token = store.getters["user/getAuthToken"];
 
-	return await axios({
-		method: "PATCH",
-		url: "/api/v1/posts",
-		data: {
-			...post
-		},
-		headers: {
-			Authorization: `Bearer ${token}`
-		}
-	});
+  return await axios({
+    method: "PATCH",
+    url: "/api/v1/posts",
+    data: {
+      ...post
+    },
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
 };

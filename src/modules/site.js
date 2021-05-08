@@ -15,16 +15,16 @@ import store from "../store";
  * @returns {object} response
  */
 export const siteSetup = async (siteTitle, name, email, password) => {
-	return await axios({
-		method: "POST",
-		url: "/api/v1/auth/setup",
-		data: {
-			siteTitle,
-			name,
-			email,
-			password
-		}
-	});
+  return await axios({
+    method: "POST",
+    url: "/api/v1/auth/setup",
+    data: {
+      siteTitle,
+      name,
+      email,
+      password
+    }
+  });
 };
 
 /**
@@ -33,10 +33,10 @@ export const siteSetup = async (siteTitle, name, email, password) => {
  * @returns {object} response
  */
 export const isSiteSetup = async () => {
-	return await axios({
-		method: "GET",
-		url: "/api/v1/auth/setup"
-	});
+  return await axios({
+    method: "GET",
+    url: "/api/v1/auth/setup"
+  });
 };
 
 /**
@@ -45,10 +45,10 @@ export const isSiteSetup = async () => {
  * @returns {object} response
  */
 export const getSettings = async () => {
-	return await axios({
-		method: "GET",
-		url: "/api/v1/settings/site"
-	});
+  return await axios({
+    method: "GET",
+    url: "/api/v1/settings/site"
+  });
 };
 
 /**
@@ -63,18 +63,18 @@ export const getSettings = async () => {
  * @returns {object} response
  */
 export const updateSettings = async site => {
-	const token = store.getters["user/getAuthToken"];
+  const token = store.getters["user/getAuthToken"];
 
-	return await axios({
-		method: "PATCH",
-		url: "/api/v1/settings/site",
-		data: {
-			...site
-		},
-		headers: {
-			Authorization: `Bearer ${token}`
-		}
-	});
+  return await axios({
+    method: "PATCH",
+    url: "/api/v1/settings/site",
+    data: {
+      ...site
+    },
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
 };
 
 /**
@@ -85,15 +85,15 @@ export const updateSettings = async site => {
  * @returns {object} response
  */
 export const uploadSiteLogo = async logo => {
-	const token = store.getters["user/getAuthToken"];
+  const token = store.getters["user/getAuthToken"];
 
-	return await axios({
-		method: "POST",
-		url: "/api/v1/settings/update-logo",
-		data: logo,
-		headers: {
-			Authorization: `Bearer ${token}`,
-			"Content-Type": "multipart/form-data"
-		}
-	});
+  return await axios({
+    method: "POST",
+    url: "/api/v1/settings/update-logo",
+    data: logo,
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "multipart/form-data"
+    }
+  });
 };

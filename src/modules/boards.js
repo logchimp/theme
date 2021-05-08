@@ -13,15 +13,15 @@ import store from "../store";
  * @returns {object} response
  */
 export const getPublicBoards = async (page = 1, limit, sort = "desc") => {
-	return await axios({
-		method: "GET",
-		url: "/api/v1/boards",
-		params: {
-			page,
-			limit,
-			created: sort
-		}
-	});
+  return await axios({
+    method: "GET",
+    url: "/api/v1/boards",
+    params: {
+      page,
+      limit,
+      created: sort
+    }
+  });
 };
 
 /**
@@ -33,15 +33,15 @@ export const getPublicBoards = async (page = 1, limit, sort = "desc") => {
  * @returns {object} response
  */
 export const getAllBoards = async (page = 1, limit, sort = "desc") => {
-	return await axios({
-		method: "GET",
-		url: "/api/v1/boards/get",
-		params: {
-			page,
-			limit,
-			created: sort
-		}
-	});
+  return await axios({
+    method: "GET",
+    url: "/api/v1/boards/get",
+    params: {
+      page,
+      limit,
+      created: sort
+    }
+  });
 };
 
 /**
@@ -52,10 +52,10 @@ export const getAllBoards = async (page = 1, limit, sort = "desc") => {
  * @returns {object} response
  */
 export const getBoardByUrl = async url => {
-	return await axios({
-		method: "GET",
-		url: `/api/v1/boards/${url}`
-	});
+  return await axios({
+    method: "GET",
+    url: `/api/v1/boards/${url}`
+  });
 };
 
 /**
@@ -66,15 +66,15 @@ export const getBoardByUrl = async url => {
  * @returns {object} response
  */
 export const searchBoard = async name => {
-	const token = store.getters["user/getAuthToken"];
+  const token = store.getters["user/getAuthToken"];
 
-	return await axios({
-		method: "GET",
-		url: `/api/v1/boards/search/${name}`,
-		headers: {
-			Authorization: `Bearer ${token}`
-		}
-	});
+  return await axios({
+    method: "GET",
+    url: `/api/v1/boards/search/${name}`,
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
 };
 
 /**
@@ -83,15 +83,15 @@ export const searchBoard = async name => {
  * @returns {object} response
  */
 export const createBoard = async () => {
-	const token = store.getters["user/getAuthToken"];
+  const token = store.getters["user/getAuthToken"];
 
-	return await axios({
-		method: "POST",
-		url: "/api/v1/boards",
-		headers: {
-			Authorization: `Bearer ${token}`
-		}
-	});
+  return await axios({
+    method: "POST",
+    url: "/api/v1/boards",
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
 };
 
 /**
@@ -107,17 +107,17 @@ export const createBoard = async () => {
  * @returns {object} response
  */
 export const updateBoard = async board => {
-	const token = store.getters["user/getAuthToken"];
-	return await axios({
-		method: "PATCH",
-		url: "/api/v1/boards",
-		data: {
-			...board
-		},
-		headers: {
-			Authorization: `Bearer ${token}`
-		}
-	});
+  const token = store.getters["user/getAuthToken"];
+  return await axios({
+    method: "PATCH",
+    url: "/api/v1/boards",
+    data: {
+      ...board
+    },
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
 };
 
 /**
@@ -128,18 +128,18 @@ export const updateBoard = async board => {
  * @returns {object} response
  */
 export const deleteBoard = async id => {
-	const token = store.getters["user/getAuthToken"];
+  const token = store.getters["user/getAuthToken"];
 
-	return await axios({
-		method: "DELETE",
-		url: "/api/v1/boards",
-		data: {
-			id
-		},
-		headers: {
-			Authorization: `Bearer ${token}`
-		}
-	});
+  return await axios({
+    method: "DELETE",
+    url: "/api/v1/boards",
+    data: {
+      id
+    },
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
 };
 
 /**
@@ -150,16 +150,16 @@ export const deleteBoard = async id => {
  * @returns {object} response
  */
 export const checkBoardName = async name => {
-	const token = store.getters["user/getAuthToken"];
+  const token = store.getters["user/getAuthToken"];
 
-	return await axios({
-		method: "POST",
-		url: "/api/v1/boards/check-name",
-		data: {
-			name
-		},
-		headers: {
-			Authorization: `Bearer ${token}`
-		}
-	});
+  return await axios({
+    method: "POST",
+    url: "/api/v1/boards/check-name",
+    data: {
+      name
+    },
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
 };

@@ -1,10 +1,10 @@
 module.exports = {
-	displayName: "client",
-	moduleFileExtensions: ["js", "vue"],
-	transform: {
-		".*\\.(js)$": "babel-jest",
-		".*\\.(vue)$": "vue-jest"
-	},
-	setupFilesAfterEnv: ["./tests/setupTest.js"],
-	verbose: true
+  displayName: "client",
+  moduleFileExtensions: ["js", "vue"],
+  transform: {
+    ".*\\.(js)$": "babel-jest",
+    ".*\\.(vue)$": "vue-jest"
+  },
+  setupFilesAfterEnv: ["./tests/setupTest.js"],
+  verbose: true
 };

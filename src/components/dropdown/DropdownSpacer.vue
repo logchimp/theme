@@ -1,9 +1,9 @@
 <template>
-	<hr class="dropdown-spacer">
+  <hr class="dropdown-spacer">
 </template>
 
 <script>
 export default {
-	name: "DropdownSpacer"
+  name: "DropdownSpacer"
 };
 </script>
