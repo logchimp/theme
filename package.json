@@ -1,65 +1,65 @@
 {
-	"name": "theme",
-	"description": "The default theme for LogChimp",
-	"version": "0.1.0",
-	"private": true,
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/logchimp/theme.git"
-	},
-	"bugs": {
-		"url": "https://github.com/logchimp/theme/issues"
-	},
-	"scripts": {
-		"dev": "vue-cli-service serve",
-		"build": "vue-cli-service build",
-		"test": "jest --config ./jest.config.js",
-		"eslint:check": "eslint --ext .vue,.js ./src",
-		"eslint:fix": "yarn eslint:check --fix",
-		"prettier:format": "prettier --write .",
-		"stylelint": "stylelint --syntax sass './src/styles/**/*.sass'"
-	},
-	"dependencies": {
-		"axios": "^0.21.1",
-		"dayjs": "^1.10.4",
-		"lucide-vue": "^0.15.11",
-		"node-sass": "^5.0.0",
-		"sass-loader": "^10.1.1",
-		"vue": "^2.6.12",
-		"vue-clickaway": "^2.2.2",
-		"vue-gtag": "^1.16.1",
-		"vue-infinite-loading": "^2.4.5",
-		"vue-meta": "^2.4.0",
-		"vue-router": "^3.5.1",
-		"vuedraggable": "^2.24.3",
-		"vuex": "^3.6.0"
-	},
-	"devDependencies": {
-		"@babel/preset-env": "^7.14.1",
-		"@vue/cli-plugin-babel": "^4.5.13",
-		"@vue/cli-plugin-eslint": "^4.5.13",
-		"@vue/cli-service": "^4.5.13",
-		"@vue/test-utils": "^1.2.0",
-		"babel-core": "^7.0.0-bridge.0",
-		"babel-plugin-transform-require-context": "^0.1.1",
-		"eslint": "^7.26.0",
-		"eslint-plugin-jest": "^24.3.6",
-		"eslint-plugin-vue": "^7.9.0",
-		"jest": "^26.6.3",
-		"prettier": "^2.2.1",
-		"stylelint": "^13.13.1",
-		"stylelint-scss": "^3.18.0",
-		"vue-jest": "^3.0.7",
-		"vue-template-compiler": "^2.6.12"
-	},
-	"keywords": [
-		"logchimp",
-		"theme",
-		"logchimp-theme",
-		"codecarrot"
-	],
-	"engines": {
-		"node": ">=12.18.4",
-		"yarn": ">=1.22"
-	}
+  "name": "theme",
+  "description": "The default theme for LogChimp",
+  "version": "0.1.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/logchimp/theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/logchimp/theme/issues"
+  },
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test": "jest --config ./jest.config.js",
+    "eslint:check": "eslint --ext .vue,.js ./src",
+    "eslint:fix": "yarn eslint:check --fix",
+    "prettier:format": "prettier --write .",
+    "stylelint": "stylelint --syntax sass './src/styles/**/*.sass'"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dayjs": "^1.10.4",
+    "lucide-vue": "^0.15.11",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.1",
+    "vue": "^2.6.12",
+    "vue-clickaway": "^2.2.2",
+    "vue-gtag": "^1.16.1",
+    "vue-infinite-loading": "^2.4.5",
+    "vue-meta": "^2.4.0",
+    "vue-router": "^3.5.1",
+    "vuedraggable": "^2.24.3",
+    "vuex": "^3.6.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.1",
+    "@vue/cli-plugin-babel": "^4.5.13",
+    "@vue/cli-plugin-eslint": "^4.5.13",
+    "@vue/cli-service": "^4.5.13",
+    "@vue/test-utils": "^1.2.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-plugin-transform-require-context": "^0.1.1",
+    "eslint": "^7.26.0",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-vue": "^7.9.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.13.1",
+    "stylelint-scss": "^3.18.0",
+    "vue-jest": "^3.0.7",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "keywords": [
+    "logchimp",
+    "theme",
+    "logchimp-theme",
+    "codecarrot"
+  ],
+  "engines": {
+    "node": ">=12.18.4",
+    "yarn": ">=1.22"
+  }
 }
