@@ -16,7 +16,7 @@
 		"test": "jest --config ./jest.config.js",
 		"eslint:check": "eslint --ext .vue,.js ./src",
 		"eslint:fix": "yarn eslint:check --fix",
-		"prettier:format": "prettier --write './**/*.{vue,js}'",
+		"prettier:format": "prettier --write .",
 		"stylelint": "stylelint --syntax sass './src/styles/**/*.sass'"
 	},
 	"dependencies": {
