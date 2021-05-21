@@ -24,7 +24,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "dayjs": "^1.10.4",
-    "lucide-vue": "^0.15.11",
+    "lucide-vue": "^0.15.17",
     "node-sass": "^5.0.0",
     "sass-loader": "^10.1.1",
     "vue": "^2.6.12",
