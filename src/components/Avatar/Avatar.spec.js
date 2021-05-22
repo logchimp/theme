@@ -1,4 +1,4 @@
-import Avatar from "../../src/components/Avatar";
+import Avatar from ".";
 import { mount } from "@vue/test-utils";
 
 describe("avatar", () => {
