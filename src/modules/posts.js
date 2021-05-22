@@ -114,3 +114,21 @@ export const updatePost = async post => {
     }
   });
 };
+
+/**
+ * Get post activity
+ *
+ * @param {object} activity
+ * @param {string} post_id post UUID
+ * @param {string} sort sort type
+ */
+export const postActivity = async ({ post_id, sort }) => {
+  return await axios({
+    method: "GET",
+    url: `/api/v1/posts/${post_id}/activity`,
+    params: {
+      sort
+    }
+  });
+};
+
