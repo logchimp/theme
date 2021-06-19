@@ -6,5 +6,6 @@ module.exports = {
     ".*\\.(vue)$": "vue-jest"
   },
   setupFilesAfterEnv: ["./tests/setupTest.js"],
-  verbose: true
+  verbose: true,
+  testEnvironment: "jsdom"
 };
