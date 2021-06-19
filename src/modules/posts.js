@@ -136,7 +136,6 @@ export const postActivity = async ({ post_id, sort }) => {
  * Add comment to a post
  *
  * @param {object} comment
- * @param {string} comment.post_id
  * @param {string} comment.body
  * @param {string} comment.is_internal
  */
@@ -145,9 +144,8 @@ export const addComment = async ({ post_id, body, is_internal}) => {
 
   return await axios({
     method: "POST",
-    url: "/api/v1/comments",
+    url: `/api/v1/posts/${post_id}/comments`,
     data: {
-      post_id,
       body,
       is_internal
     },
