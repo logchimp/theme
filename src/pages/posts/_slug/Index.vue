@@ -3,7 +3,7 @@
     <div v-if="isPostExist" class="viewpost">
       <div class="viewpost__vote">
         <div>
-          <Vote
+          <vote
             :post-id="post.postId"
             :votes-count="post.voters.votesCount"
             :is-voted="post.voters.viewerVote"
@@ -60,6 +60,26 @@
       <p v-html="post.contentMarkdown" />
 
       <div class="activity-section">
+        <div class="card">
+          <l-text
+            v-model="comment.value"
+            name="comment"
+            placeholder="Leave a comment"
+            @keyup-enter="submitComment"
+          />
+
+          <div style="display: flex; justify-content: flex-end;">
+            <Button
+              type="primary"
+              :loading="comment.buttonLoading"
+              :disabled="!comment.value"
+              @click="submitComment"
+            >
+              Submit
+            </Button>
+          </div>
+        </div>
+
         <header class="activity-header">
           <h6>activity</h6>
 
@@ -111,7 +131,7 @@
 import { MoreHorizontal as MoreIcon, Edit2 as EditIcon } from "lucide-vue";
 
 // modules
-import { getPostBySlug, postActivity } from "../../../modules/posts";
+import { getPostBySlug, addComment, postActivity } from "../../../modules/posts";
 
 // components
 import Loader from "../../../components/Loader";
@@ -120,6 +140,8 @@ import DropdownWrapper from "../../../components/dropdown/DropdownWrapper";
 import Dropdown from "../../../components/dropdown/Dropdown";
 import DropdownItem from "../../../components/dropdown/DropdownItem";
 import Avatar from "../../../components/Avatar";
+import LText from "../../../components/input/LText";
+import Button from "../../../components/Button";
 import ActivityItem from "../../../components/ActivityItem/ActivityItem";
 
 export default {
@@ -132,6 +154,8 @@ export default {
     Dropdown,
     DropdownItem,
     Avatar,
+    LText,
+    Button,
     ActivityItem,
 
     // icons
@@ -144,6 +168,10 @@ export default {
         loading: false
       },
       isPostExist: true,
+      comment: {
+        value: "",
+        buttonLoading: false
+      },
       activity: {
         loading: false,
         sort: "desc",
@@ -213,6 +241,22 @@ export default {
         console.log(error);
       } finally {
         this.activity.loading = false;
+      }
+    },
+    async submitComment() {
+      if (!this.comment.value) return;
+
+      try {
+        await addComment({
+          post_id: this.post.postId,
+          body: this.comment.value,
+          is_internal: false
+        });
+
+        this.comment.value = "";
+        this.getPostActivity();
+      } catch (error) {
+        console.log(error);
       }
     },
     updateVoters(voters) {
