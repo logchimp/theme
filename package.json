@@ -32,7 +32,7 @@
     "vue-gtag": "^1.16.1",
     "vue-infinite-loading": "^2.4.5",
     "vue-meta": "^2.4.0",
-    "vue-router": "^3.5.1",
+    "vue-router": "^3.5.2",
     "vuedraggable": "^2.24.3",
     "vuex": "^3.6.0"
   },
@@ -44,7 +44,7 @@
     "@storybook/addons": "^6.2.9",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/theming": "^6.2.9",
-    "@storybook/vue": "^6.2.9",
+    "@storybook/vue": "^6.3.0",
     "@vue/cli-plugin-babel": "^4.5.13",
     "@vue/cli-plugin-eslint": "^4.5.13",
     "@vue/cli-service": "^4.5.13",
