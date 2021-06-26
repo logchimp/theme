@@ -15,21 +15,23 @@ const Template = (args, { argTypes }) => ({
 export const Default = Template.bind({});
 Default.args = {
   activity: {
-    id: "1ede4cd5-06d6-4136-baf2-d62a4f56f577",
-    parent_id: null,
-    body: "this is a much have feature requests.",
+    id: "86c4d223-972a-448a-abbe-458eb87fc0c6",
     type: "comment",
-    post_id: "8b1a0315-c941-45d5-a9c9-92e9497599bb",
-    is_edited: false,
-    is_spam: false,
-    is_internal: false,
-    created_at: "2021-05-09T12:23:37.484Z",
-    updated_at: "2021-05-09T12:23:37.484Z",
+    comment: {
+      id: "c5e4bddd-6615-4f7a-ae0e-3402ce958df9",
+      parent_id: null,
+      body: "sda",
+      is_internal: false,
+      is_edited: false,
+      is_spam: false,
+      created_at: "2021-06-26T06:10:24.536+00:00"
+    },
     author: {
-      userId: "8e359afe-510a-423d-805a-18b04974dac1",
-      name: "Yashu mittal7",
-      username: "mittalyashu7",
-      avatar: "https://www.gravatar.com/avatar/83780122029d3c7767c97a6e26642525"
-    }
+      user_id: "5713d443-98b0-4a07-8908-385c4e6afca5",
+      name: "Yashu Mittal",
+      username: "mittalyashu",
+      avatar: "https://www.gravatar.com/avatar/a32d5e3c2f125c7dfc92467707d73f3c"
+    },
+    created_at: "2021-06-26T06:10:24.537Z"
   }
 };
