@@ -247,14 +247,14 @@ export default {
       if (!this.comment.value) return;
 
       try {
-        await addComment({
+        const response = await addComment({
           post_id: this.post.postId,
           body: this.comment.value,
           is_internal: false
         });
 
         this.comment.value = "";
-        this.getPostActivity();
+        this.activity.data.unshift(response.data.comment);
       } catch (error) {
         console.log(error);
       }
