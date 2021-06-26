@@ -83,7 +83,7 @@
         <header class="activity-header">
           <h6>activity</h6>
 
-          <div class="activity-sort">
+          <!-- <div class="activity-sort">
             <div
               class="sort-option"
               :class="{
@@ -102,7 +102,7 @@
             >
               Oldest
             </div>
-          </div>
+          </div> -->
         </header>
 
         <div v-if="!activity.loading" class="activity-list">
