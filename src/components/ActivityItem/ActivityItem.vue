@@ -4,7 +4,7 @@
 
     <div class="activity-item-content">
       <h6>{{ activity.author.name }}</h6>
-      <p>{{ activity.body }}</p>
+      <p>{{ activity.comment.body }}</p>
 
       <time
         :datetime="activity.created_at"
