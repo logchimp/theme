@@ -28,8 +28,7 @@ export default {
   props: {
     activity: {
       type: Object,
-      required: true,
-      default: () => {}
+      required: true
     }
   }
 };
