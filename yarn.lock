@@ -6056,10 +6056,10 @@ data-urls@^2.0.0:
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
 
-dayjs@^1.10.5:
-  version "1.10.5"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.5.tgz#5600df4548fc2453b3f163ebb2abbe965ccfb986"
-  integrity sha512-BUFis41ikLz+65iH6LHQCDm4YPMj5r1YFLdupPIyM4SGcXMmtiLQ7U37i+hGS8urIuqe7I/ou3IS1jVc4nbN4g==
+dayjs@^1.10.6:
+  version "1.10.6"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.6.tgz#288b2aa82f2d8418a6c9d4df5898c0737ad02a63"
+  integrity sha512-AztC/IOW4L1Q41A86phW5Thhcrco3xuAA+YX/BLpLWWjRcTj5TOt/QImBLmCKlrF7u7k47arTnOyL6GnbG8Hvw==
 
 de-indent@^1.0.2:
   version "1.0.2"
@@ -10199,10 +10199,10 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-lucide-vue@^0.15.25:
-  version "0.15.25"
-  resolved "https://registry.yarnpkg.com/lucide-vue/-/lucide-vue-0.15.25.tgz#f36790a5e7a75b04e1ab113e438d63fc6db6a064"
-  integrity sha512-61Vpc+3nXvcvsdHq+WIKrKMhg9Aak1/aLyzDRZCtGNfPFbaTAVdUwV6tKWHDV0RdZt6zJNl27UBysW6gs3Jz4Q==
+lucide-vue@^0.15.26:
+  version "0.15.26"
+  resolved "https://registry.yarnpkg.com/lucide-vue/-/lucide-vue-0.15.26.tgz#596dcf70b7870a17c6902855fb9c17bd8648210e"
+  integrity sha512-xO+CJ34IeR75h5tFxzwMzHjrBaJ9Az8YlCUzCZFvObsBrgPcjkUUtuY3HJJuILiisNa6v3FiBvbtVMgJ2H7ctw==
 
 magic-string@^0.25.7:
   version "0.25.7"
@@ -13319,10 +13319,10 @@ sass-loader@^10.1.1:
     schema-utils "^3.0.0"
     semver "^7.3.2"
 
-sass@^1.35.1:
-  version "1.35.1"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.35.1.tgz#90ecf774dfe68f07b6193077e3b42fb154b9e1cd"
-  integrity sha512-oCisuQJstxMcacOPmxLNiLlj4cUyN2+8xJnG7VanRoh2GOLr9RqkvI4AxA4a6LHVg/rsu+PmxXeGhrdSF9jCiQ==
+sass@^1.35.2:
+  version "1.35.2"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.35.2.tgz#b732314fcdaf7ef8d0f1698698adc378043cb821"
+  integrity sha512-jhO5KAR+AMxCEwIH3v+4zbB2WB0z67V1X0jbapfVwQQdjHZUGUyukpnoM6+iCMfsIUC016w9OPKQ5jrNOS9uXw==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
 
