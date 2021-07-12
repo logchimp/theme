@@ -40,7 +40,7 @@
     "@babel/preset-env": "^7.14.7",
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-essentials": "^6.3.4",
-    "@storybook/addon-links": "^6.3.2",
+    "@storybook/addon-links": "^6.3.4",
     "@storybook/addons": "^6.3.4",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/theming": "^6.3.2",
