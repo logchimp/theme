@@ -59,7 +59,7 @@
 
       <p v-html="post.contentMarkdown" />
 
-      <div class="activity-section">
+      <div v-if="showPostActivity" class="activity-section">
         <div class="card">
           <l-text
             v-model="comment.value"
@@ -193,6 +193,9 @@ export default {
 
       if (!checkPermission && userId !== authorId) return false;
       return true;
+    },
+    showPostActivity() {
+      return this.$store.getters["settings/labs"].comments;
     },
     getSiteSittings() {
       return this.$store.getters["settings/get"];

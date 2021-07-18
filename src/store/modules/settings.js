@@ -11,7 +11,8 @@ const state = {
 };
 
 const getters = {
-  get: state => state
+  get: state => state,
+  labs: state => state.labs
 };
 
 const mutations = {
