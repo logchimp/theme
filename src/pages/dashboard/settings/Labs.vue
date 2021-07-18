@@ -70,7 +70,7 @@ export default {
   computed: {
     updateSettingsPermissionDisabled() {
       const permissions = this.$store.getters["user/getPermissions"];
-      const checkPermission = permissions.includes("setting:update");
+      const checkPermission = permissions.includes("settings:update");
       return !checkPermission;
     }
   },
