@@ -98,3 +98,35 @@ export const uploadSiteLogo = async logo => {
     }
   });
 };
+
+/**
+ * Get labs settings
+ *
+ * @returns {object} response
+ */
+export const getLabsSettings = async () => {
+  return await axios({
+    method: "GET",
+    url: "/api/v1/settings/labs"
+  });
+};
+
+/**
+ * update labs settings
+ *
+ * @param {*} labs
+ *
+ * @returns {object} response
+ */
+export const updateLabsSettings = async labs => {
+  const token = store.getters["user/getAuthToken"];
+
+  return await axios({
+    method: "PATCH",
+    url: "/api/v1/settings/labs",
+    data: labs,
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
+};
