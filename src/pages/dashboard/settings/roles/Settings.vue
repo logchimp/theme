@@ -160,11 +160,11 @@
       </p>
       <div class="form-columns">
         <div class="form-column">
-          <toggle-item v-model="permissions.setting.read" label="Read" />
+          <toggle-item v-model="permissions.settings.read" label="Read" />
         </div>
 
         <div class="form-column">
-          <toggle-item v-model="permissions.setting.update" label="Update" />
+          <toggle-item v-model="permissions.settings.update" label="Update" />
         </div>
       </div>
     </div>
@@ -233,7 +233,7 @@ export default {
           assign: false,
           unassign: false
         },
-        setting: {
+        settings: {
           read: false,
           update: false
         }
