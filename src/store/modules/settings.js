@@ -6,7 +6,8 @@ const state = {
   accentColor: "",
   googleAnalyticsId: "",
   isPoweredBy: true,
-  allowSignup: true
+  allowSignup: true,
+  labs: {}
 };
 
 const getters = {
@@ -23,6 +24,7 @@ const mutations = {
     state.title = payload.title;
     state.googleAnalyticsId = payload.googleAnalyticsId;
     state.allowSignup = payload.allowSignup;
+    state.labs = payload.labs;
 
     localStorage.setItem("settings", JSON.stringify(payload));
   }
@@ -30,7 +32,10 @@ const mutations = {
 
 const actions = {
   update: ({ commit }, payload) => {
-    commit("update", payload);
+    commit("update", {
+      ...state,
+      ...payload
+    });
   },
   updateLogo: ({ state, commit }, payload) => {
     commit("update", {
