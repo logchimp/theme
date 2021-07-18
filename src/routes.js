@@ -173,6 +173,11 @@ const routes = [
         component: require("./pages/dashboard/settings/roles/Settings").default
       },
       {
+        path: "settings/labs",
+        name: "Dashbord labs",
+        component: require("./pages/dashboard/settings/Labs").default
+      },
+      {
         path: "/dashboard/*",
         name: "Dashboard page not found",
         component: require("./pages/pageNotFound").default

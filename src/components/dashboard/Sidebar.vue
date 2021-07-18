@@ -60,6 +60,12 @@
           <p>Roles</p>
         </router-link>
       </li>
+      <li>
+        <router-link to="/dashboard/settings/labs" class="sidebar-list-item">
+          <lab-icon />
+          <p>Labs</p>
+        </router-link>
+      </li>
     </div>
     <footer>
       <dropdown-wrapper>
@@ -119,6 +125,7 @@ import {
   Users as UsersIcon,
   Settings as SettingsIcon,
   Shield as ShieldIcon,
+  FlaskConical as LabIcon,
   Info as InfoIcon,
   Twitter as TwitterIcon,
   LogOut as LogoutIcon
@@ -151,6 +158,7 @@ export default {
     PostIcon,
     UsersIcon,
     SettingsIcon,
+    LabIcon,
     InfoIcon,
     TwitterIcon,
     LogoutIcon,
