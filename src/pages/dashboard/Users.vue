@@ -19,7 +19,7 @@
         <div class="table-header-item users-table-votes">
           votes
         </div>
-        <div class="table-header-item users-table-votes" />
+        <div v-if="isDeveloperMode" class="table-header-item users-table-votes" />
       </template>
       <div
         v-for="user in users"
@@ -40,7 +40,7 @@
         <div class="table-data users-table-votes">
           {{ user.votes }}
         </div>
-        <div class="table-icon-group boards-table-icons">
+        <div v-if="isDeveloperMode" class="table-icon-group boards-table-icons">
           <dropdown-wrapper>
             <template #toggle>
               <div
@@ -118,6 +118,11 @@ export default {
       users: [],
       page: 1
     };
+  },
+  computed: {
+    isDeveloperMode() {
+      return this.$store.getters["settings/get"].developer_mode;
+    }
   },
   methods: {
     async getUsers($state) {

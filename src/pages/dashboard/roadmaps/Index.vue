@@ -73,6 +73,7 @@
                       Settings
                     </dropdown-item>
                     <dropdown-item
+                      v-if="isDeveloperMode"
                       @click="copyText(roadmap.id)"
                     >
                       <template #icon>
@@ -166,6 +167,9 @@ export default {
       const permissions = this.$store.getters["user/getPermissions"];
       const checkPermission = permissions.includes("roadmap:destroy");
       return !checkPermission;
+    },
+    isDeveloperMode() {
+      return this.$store.getters["settings/get"].developer_mode;
     }
   },
   created() {

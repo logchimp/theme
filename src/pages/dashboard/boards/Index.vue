@@ -79,6 +79,7 @@
                   Settings
                 </dropdown-item>
                 <dropdown-item
+                  v-if="isDeveloperMode"
                   @click="copyText(board.boardId)"
                 >
                   <template #icon>
@@ -184,6 +185,9 @@ export default {
       const permissions = this.$store.getters["user/getPermissions"];
       const checkPermission = permissions.includes("board:destroy");
       return !checkPermission;
+    },
+    isDeveloperMode() {
+      return this.$store.getters["settings/get"].developer_mode;
     }
   },
   methods: {

@@ -40,7 +40,7 @@
             >
               <settings-icon />
             </router-link>
-            <dropdown-wrapper>
+            <dropdown-wrapper v-if="isDeveloperMode">
               <template #toggle>
                 <div
                   class="table-data table-data-icon boards-table-icon-settings dropdown-menu-icon"
@@ -110,6 +110,9 @@ export default {
       const permissions = this.$store.getters["user/getPermissions"];
       const checkPermission = permissions.includes("role:create");
       return !checkPermission;
+    },
+    isDeveloperMode() {
+      return this.$store.getters["settings/get"].developer_mode;
     }
   },
   created() {
