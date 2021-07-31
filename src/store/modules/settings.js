@@ -7,6 +7,7 @@ const state = {
   googleAnalyticsId: "",
   isPoweredBy: true,
   allowSignup: true,
+  developer_mode: false,
   labs: {}
 };
 
@@ -25,6 +26,7 @@ const mutations = {
     state.title = payload.title;
     state.googleAnalyticsId = payload.googleAnalyticsId;
     state.allowSignup = payload.allowSignup;
+    state.developer_mode = payload.developer_mode;
     state.labs = payload.labs;
 
     localStorage.setItem("settings", JSON.stringify(payload));

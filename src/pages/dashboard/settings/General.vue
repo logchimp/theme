@@ -238,6 +238,7 @@ export default {
         this.description.value = response.data.settings.description;
         this.accentColor.value = response.data.settings.accentColor;
         this.googleAnalyticsId.value = response.data.settings.googleAnalyticsId;
+        this.developer_mode = response.data.settings.developer_mode;
 
         this.$store.dispatch("settings/update", response.data.settings);
       } catch (error) {
