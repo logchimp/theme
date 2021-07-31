@@ -43,7 +43,7 @@
     "@storybook/addon-links": "^6.3.6",
     "@storybook/addons": "^6.3.4",
     "@storybook/preset-scss": "^1.0.3",
-    "@storybook/theming": "^6.3.5",
+    "@storybook/theming": "^6.3.6",
     "@storybook/vue": "^6.3.6",
     "@vue/cli-plugin-babel": "^4.5.13",
     "@vue/cli-plugin-eslint": "^4.5.13",
