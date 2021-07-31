@@ -91,6 +91,13 @@
             @hide-error="hideGoogleAnalyticsError"
           />
         </div>
+
+        <div class="form-column">
+          <toggle-item
+            v-model="developer_mode"
+            label="Developer Mode"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -151,6 +158,7 @@ export default {
           message: ""
         }
       },
+      developer_mode: false,
       updateSettingsButtonLoading: false
     };
   },
@@ -218,7 +226,8 @@ export default {
         description: this.description.value,
         accentColor: this.accentColor.value,
         googleAnalyticsId: this.googleAnalyticsId.value,
-        allowSignup: this.allowSignup
+        allowSignup: this.allowSignup,
+        developer_mode: this.developer_mode
       };
 
       try {
@@ -247,6 +256,7 @@ export default {
         this.allowSignup = response.data.settings.allowSignup;
         this.accentColor.value = response.data.settings.accentColor;
         this.googleAnalyticsId.value = response.data.settings.googleAnalyticsId;
+        this.developer_mode = response.data.settings.developer_mode;
       } catch (error) {
         console.error(error);
       }
