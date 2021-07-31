@@ -40,6 +40,27 @@
             >
               <settings-icon />
             </router-link>
+            <dropdown-wrapper>
+              <template #toggle>
+                <div
+                  class="table-data table-data-icon boards-table-icon-settings dropdown-menu-icon"
+                >
+                  <more-icon />
+                </div>
+              </template>
+              <template #default="dropdown">
+                <dropdown v-if="dropdown.active">
+                  <dropdown-item
+                    @click="copyText(role.id)"
+                  >
+                    <template #icon>
+                      <copy-icon />
+                    </template>
+                    Copy ID
+                  </dropdown-item>
+                </dropdown>
+              </template>
+            </dropdown-wrapper>
           </div>
         </div>
       </div>
@@ -49,22 +70,34 @@
 
 <script>
 // packages
-import { Settings as SettingsIcon } from "lucide-vue";
+import {
+  Settings as SettingsIcon,
+  Clipboard as CopyIcon,
+  MoreHorizontal as MoreIcon
+} from "lucide-vue";
 
 // modules
 import { getAllRoles, createRole } from "../../../../modules/roles";
 
 // components
 import Button from "../../../../components/Button";
+import DropdownWrapper from "../../../../components/dropdown/DropdownWrapper";
+import Dropdown from "../../../../components/dropdown/Dropdown";
+import DropdownItem from "../../../../components/dropdown/DropdownItem";
 
 export default {
   name: "SettingsRoles",
   components: {
     // components
     Button,
+    DropdownWrapper,
+    Dropdown,
+    DropdownItem,
 
     // icons
-    SettingsIcon
+    SettingsIcon,
+    CopyIcon,
+    MoreIcon
   },
   data() {
     return {
@@ -104,6 +137,9 @@ export default {
       } catch (error) {
         console.error(error);
       }
+    },
+    copyText(text) {
+      navigator.clipboard.writeText(text).then().catch(err => console.log(err));
     }
   }
 };
