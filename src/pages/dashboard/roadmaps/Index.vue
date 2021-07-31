@@ -72,6 +72,14 @@
                       </template>
                       Settings
                     </dropdown-item>
+                    <dropdown-item
+                      @click="copyText(roadmap.id)"
+                    >
+                      <template #icon>
+                        <copy-icon />
+                      </template>
+                      Copy ID
+                    </dropdown-item>
                     <dropdown-spacer />
                     <dropdown-item
                       :disabled="deleteRoadmapPermissionDisabled"
@@ -101,6 +109,7 @@ import {
   Eye as EyeIcon,
   EyeOff as EyeOffIcon,
   MoreHorizontal as MoreIcon,
+  Clipboard as CopyIcon,
   Trash2 as DeleteIcon,
   Settings as SettingsIcon
 } from "lucide-vue";
@@ -136,6 +145,7 @@ export default {
     EyeIcon,
     EyeOffIcon,
     MoreIcon,
+    CopyIcon,
     DeleteIcon,
     SettingsIcon
   },
@@ -217,6 +227,9 @@ export default {
       } catch (error) {
         console.error(error);
       }
+    },
+    copyText(text) {
+      navigator.clipboard.writeText(text).then().catch(err => console.log(err));
     }
   },
   metaInfo() {
