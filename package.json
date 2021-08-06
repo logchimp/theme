@@ -63,7 +63,7 @@
     "stylelint": "^13.13.1",
     "stylelint-scss": "^3.18.0",
     "vue-jest": "^3.0.7",
-    "vue-loader": "^15.9.7",
+    "vue-loader": "^15.9.8",
     "vue-template-compiler": "^2.6.14"
   },
   "keywords": [
