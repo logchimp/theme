@@ -55,7 +55,7 @@
     "css-loader": "^6.2.0",
     "eslint": "^7.30.0",
     "eslint-plugin-jest": "^24.4.0",
-    "eslint-plugin-vue": "^7.13.0",
+    "eslint-plugin-vue": "^7.15.1",
     "jest": "^27.0.6",
     "prettier": "^2.3.2",
     "sass": "^1.36.0",
