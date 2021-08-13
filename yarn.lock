@@ -5443,22 +5443,6 @@ css-declaration-sorter@^4.0.1:
     postcss "^7.0.1"
     timsort "^0.3.0"
 
-css-loader@5.2.7:
-  version "5.2.7"
-  resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-5.2.7.tgz#9b9f111edf6fb2be5dc62525644cbc9c232064ae"
-  integrity sha512-Q7mOvpBNBG7YrVGMxRxcBJZFL75o+cH2abNASdibkj/fffYD8qWbInZrD0S9ccI6vZclF3DsHE7njGlLtaHbhg==
-  dependencies:
-    icss-utils "^5.1.0"
-    loader-utils "^2.0.0"
-    postcss "^8.2.15"
-    postcss-modules-extract-imports "^3.0.0"
-    postcss-modules-local-by-default "^4.0.0"
-    postcss-modules-scope "^3.0.0"
-    postcss-modules-values "^4.0.0"
-    postcss-value-parser "^4.1.0"
-    schema-utils "^3.0.0"
-    semver "^7.3.5"
-
 css-loader@^3.5.3, css-loader@^3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-3.6.0.tgz#2e4b2c7e6e2d27f8c8f28f61bffcd2e6c91ef645"
@@ -5477,6 +5461,22 @@ css-loader@^3.5.3, css-loader@^3.6.0:
     postcss-value-parser "^4.1.0"
     schema-utils "^2.7.0"
     semver "^6.3.0"
+
+css-loader@^5.2.7:
+  version "5.2.7"
+  resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-5.2.7.tgz#9b9f111edf6fb2be5dc62525644cbc9c232064ae"
+  integrity sha512-Q7mOvpBNBG7YrVGMxRxcBJZFL75o+cH2abNASdibkj/fffYD8qWbInZrD0S9ccI6vZclF3DsHE7njGlLtaHbhg==
+  dependencies:
+    icss-utils "^5.1.0"
+    loader-utils "^2.0.0"
+    postcss "^8.2.15"
+    postcss-modules-extract-imports "^3.0.0"
+    postcss-modules-local-by-default "^4.0.0"
+    postcss-modules-scope "^3.0.0"
+    postcss-modules-values "^4.0.0"
+    postcss-value-parser "^4.1.0"
+    schema-utils "^3.0.0"
+    semver "^7.3.5"
 
 css-select-base-adapter@^0.1.1:
   version "0.1.1"
@@ -9791,10 +9791,10 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-lucide-vue@^0.15.28:
-  version "0.15.28"
-  resolved "https://registry.yarnpkg.com/lucide-vue/-/lucide-vue-0.15.28.tgz#93b7d32b175e48afa3300aaa172ebaa121995579"
-  integrity sha512-5vCcLMW35nP/GLHUUQSlCVD8GWRlSrH4QxqCO0rnuH+kqNXOPcQaIPzzEDfDb+l3X7BzAPbI/5fA157WNuqQqw==
+lucide-vue@^0.15.30:
+  version "0.15.30"
+  resolved "https://registry.yarnpkg.com/lucide-vue/-/lucide-vue-0.15.30.tgz#8bbc6238b896a4c42f3e8f33e9064689d7faff95"
+  integrity sha512-L/kiDwYahbIxT6l8QENUe/AxU9FAQ9kge4HHmdER5zFijU7dV6a5fdF4/BzXCZ0pt+Nmh1c8bOyVmP4e4IbtZA==
 
 magic-string@^0.25.7:
   version "0.25.7"
