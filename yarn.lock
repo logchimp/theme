@@ -9957,10 +9957,10 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-lucide-vue@^0.16.5:
-  version "0.16.5"
-  resolved "https://registry.yarnpkg.com/lucide-vue/-/lucide-vue-0.16.5.tgz#fe97b5cbfac158d0a807b4a0c29e57f650506409"
-  integrity sha512-W11um/zgHRSmQ40oUtgGzFdf//Ch3zxZGMtTJWXv1t0neY+IY/MUO7LrOe78RxA3vBlPDmmxWIBcjQYGwzXDfg==
+lucide-vue@^0.16.10:
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/lucide-vue/-/lucide-vue-0.16.10.tgz#6e64d4093a9d3309513370e73452bb2c6e9984c7"
+  integrity sha512-hFIFO84DxKX32Q2JNsgZsHY9Ozs1vfOjuuwDeTKlEO1TAa0h3pazW7acZcHSvYFsbr4+AkAKOLGhcvUpF2eudQ==
 
 magic-string@^0.25.7:
   version "0.25.7"
