@@ -22,7 +22,7 @@
     "build-storybook": "build-storybook --static-dir ./.storybook/static"
   },
   "dependencies": {
-    "axios": "^0.22.0",
+    "axios": "^0.24.0",
     "dayjs": "^1.10.7",
     "lucide-vue": "^0.16.11",
     "node-sass": "6.0.1",
