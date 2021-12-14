@@ -60,8 +60,8 @@
     "prettier": "^2.4.1",
     "sass": "^1.45.0",
     "style-loader": "2.0.0",
-    "stylelint": "^13.13.1",
-    "stylelint-scss": "^3.21.0",
+    "stylelint": "^14.1.0",
+    "stylelint-scss": "^4.0.1",
     "vue-jest": "^3.0.7",
     "vue-loader": "^15.9.8",
     "vue-template-compiler": "^2.6.14"
