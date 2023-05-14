@@ -21,10 +21,11 @@
         </div>
         <div v-if="isDeveloperMode" class="table-header-item users-table-votes" />
       </template>
-      <div
+      <router-link
         v-for="user in users"
         :key="user.userId"
         class="table-row"
+        :to="`/dashboard/users/${user.userId}/edit`"
       >
         <div class="table-data users-table-user">
           <div class="users-table-user-avatar">
@@ -63,7 +64,7 @@
             </template>
           </dropdown-wrapper>
         </div>
-      </div>
+      </router-link>
       <infinite-loading @infinite="getUsers">
         <div slot="spinner" class="loader-container">
           <loader />
@@ -85,15 +86,15 @@ import {
 import InfiniteLoading from "vue-infinite-loading";
 
 // modules
-import { getAllUsers } from "../../modules/users";
+import { getAllUsers } from "../../../modules/users";
 
 // components
-import Table from "../../components/Table";
-import Avatar from "../../components/Avatar";
-import Loader from "../../components/Loader";
-import DropdownWrapper from "../../components/dropdown/DropdownWrapper";
-import Dropdown from "../../components/dropdown/Dropdown";
-import DropdownItem from "../../components/dropdown/DropdownItem";
+import Table from "../../../components/Table";
+import Avatar from "../../../components/Avatar";
+import Loader from "../../../components/Loader";
+import DropdownWrapper from "../../../components/dropdown/DropdownWrapper";
+import Dropdown from "../../../components/dropdown/Dropdown";
+import DropdownItem from "../../../components/dropdown/DropdownItem";
 
 export default {
   name: "DashboardUsers",

@@ -96,3 +96,20 @@ export const checkUserDashboardAccess = async () => {
     }
   });
 };
+
+/**
+ * DASHBOARD: Get users data
+ *
+ * @param {string} userId user of which you want to access data of
+ */
+export const getUserData = async ({ userId }) => {
+  const token = store.getters["user/getAuthToken"];
+
+  return await axios({
+    method: "GET",
+    url: `/api/v1/users/${userId}/get`,
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
+};
