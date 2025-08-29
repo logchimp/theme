@@ -1,5 +1,8 @@
 # Theme
 
+> This repository is archieved and no longer maintained.
+> LogChimp Theme source files are moved to [logchimp/logchimp](https://github.com/logchimp/logchimp) repository.
+
 The default theme for [LogChimp](https://github.com/logchimp/logchimp).
 
 ![test](https://github.com/logchimp/theme/workflows/test/badge.svg?branch=main) [![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@main/badge/badge-storybook.svg)](https://components.logchimp.codecarrot.net/)
