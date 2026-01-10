@@ -155,7 +155,12 @@ const routes = [
       {
         path: "users",
         name: "Dashbord users",
-        component: require("./pages/dashboard/Users").default
+        component: require("./pages/dashboard/users/Index").default
+      },
+      {
+        path: "users/:id/edit",
+        name: "Dashbord users edit",
+        component: require("./pages/dashboard/users/Edit").default
       },
       {
         path: "settings/general",
